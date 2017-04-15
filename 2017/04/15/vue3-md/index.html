@@ -1,48 +1,438 @@
-extends partial/layout
+<!DOCTYPE html>
+<html class="">
 
-block site_title
-    != page.title + " · " + config.title
-
-block description
-    - var desc = page.desc || page.title + ' - ' + config.author;
-    meta(name="description", content=desc)
-
-block container
-    div#post-container
-        include mixins/post
-        +post(page)
-        include partial/comment
-
-    //- Comment
-    if theme.duoshuo
-        script.
-            var duoshuoQuery = {short_name:"#{theme.duoshuo}"};
-            (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
-            })();
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="renderer" content="webkit">
 
 
-    if theme.disqus
-        script.
-            var disqus_shortname = '#{theme.disqus}';
-            var disqus_identifier = '#{page.path}';
-            var disqus_title = '#{page.title}';
-            var disqus_url = '#{config.url}/#{page.path}';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        script(id='dsq-count-scr' src='//#{theme.disqus}.disqus.com/count.js' async)
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-block pagination
-    include mixins/paginator
-    +post()
 
-block copyright
-    include partial/copyright
+
+
+
+
+  <meta name="keywords" content="柳志超, 柳志超博客" />
+
+
+
+
+
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" skip="true">
+<link rel="stylesheet" href="/vendors/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<!--[if lt IE 9]>
+     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+  <title> vue3.md | Suntingting </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lt IE 9]>
+<style>
+#outdated{position:fixed;top:0;left:0;width:100%;height:148px;text-align:center;text-transform:uppercase;z-index:1500;background-color:#f25648;color:#fff}* html #outdated{position:absolute}#outdated h6{font-size:25px;line-height:25px;margin:30px 0 10px}#outdated p{font-size:12px;line-height:12px;margin:0}#outdated #btnUpdateBrowser{display:block;position:relative;padding:10px 20px;margin:30px auto 0;width:230px;color:#fff;text-decoration:none;border:2px solid #fff;cursor:pointer}#outdated #btnUpdateBrowser:hover{color:#f25648;background-color:#fff}
+</style>
+<div id="outdated">
+ <h6>Your browser is out of date!</h6>
+ <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow" target="_blank">Update my browser now </a></p>
+</div>
+<![endif]-->
+ <div id="about" style="display:none">
+    <div class="container">
+        <section class="content">
+            <div id="about-card">
+                <span id="about-btn-close">
+                    <i class="fa fa-remove"></i>
+                </span>
+                 
+                 <img id="about-card-picture" src="/images/me/me256.png" class="skip"/>
+                 
+                    <h4 id="about-card-name">Hi,I'm 孙婷婷</h4>
+                    <h5 id="about-card-bio"><p>If you have any question, please do not hesitate to contact me. :)</p></h5>
+                    <div id="profile_social">
+                        <h6>My Social Profiles</h6>
+                            <a href="https://github.com/liuzc" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="/images/me/wechat.png" target="_blank" rel="portfolio" class="info fancybox"><i class="fa fa-weixin"></i></a>
+                            <a href="/images/me/myemail.jpg" target="_blank" class="fancybox"><i class="fa fa-envelope"></i></a>
+                            <a href="https://www.flickr.com/photos/liuzc" target="_blank"><i class="fa fa-flickr"></i></a>
+                            <a href="https://twiiter.com/liuzc89" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+  <div id="blog">
+    <div class="container wrapper page-post-detail">
+      <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+          <div class="header-inner"><div class="site-header" role="banner">
+<nav class="top-nav">
+   <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+   <a id="nav-search-btn" class="nav-icon st-search-show-outputs" href="#" title="Search"></a>
+</nav>
+  <hgroup>
+    
+    <h1 class="site-title">
+      <a rel="home" href="/#about">
+      <span class="logo-line-before">
+        <i></i>
+      </span>
+        <img class="skip custom_logo" alt="Suntingting" src="/images/me/me256.png">
+        <span class="logo-line-after">
+          <i></i>
+        </span>
+      </a>
+    </h1>
+  
+    <h2 class="site-description">Myblog</h2>
+  </hgroup>
+
+  <nav id="site-navigation" class="main-navigation" role="navigation">
+    
+    <ul id="menu" class="menu ">
+      
+      
+      <li class="menu-item menu-item-home">
+        <a href="/" rel="section">
+          Home
+        </a>
+      </li>
+      
+      
+      <li class="menu-item menu-item-archives">
+        <a href="/archives" rel="section">
+          Archives
+        </a>
+      </li>
+      
+      
+      <li class="menu-item menu-item-guestbook">
+        <a href="/guestbook" rel="section">
+          Guestbook
+        </a>
+      </li>
+      
+      
+      <li class="menu-item menu-item-about">
+        <a href="/#about" rel="section">
+          About
+        </a>
+      </li>
+      
+    </ul>
+    
+  </nav>
+</div>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="main-inner">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue3.md
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2017-04-15T09:22:34+08:00" content="2017-04-15">
+              2017-04-15
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h4 id="vue复习"><a href="#vue复习" class="headerlink" title="vue复习"></a>vue复习</h4><ul>
+<li>父传子、子传父<ul>
+<li>父传子<ul>
+<li>给子组件声明props属性[‘属性名’]</li>
+<li>涉及到js逻辑代码，通过this.$props.属性名获取</li>
+</ul>
+</li>
+<li>传递属性值，常量直接传递不需要绑定属性</li>
+<li>变量需要绑定属性:属性名</li>
+</ul>
+<ul>
+<li>接收和发射需要是同一个对象</li>
+<li>核心:每个对象中都储存这一个保存任务的对象，这个对象的key就是字符串，值就是函数</li>
+<li>blod() 二进制数据<h4 id="get和post请求总结"><a href="#get和post请求总结" class="headerlink" title="get和post请求总结"></a>get和post请求总结</h4></li>
+<li>get请求可以减少到只给一个url参数，then是一个函数，第一个参数是成功后的回调，第二个参数是失败后的回调</li>
+<li>post请求<h4 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h4></li>
+<li>在任意请求之前做一些操作，比如加上头信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push(function(request,next)&#123;</div><div class="line">//</div><div class="line">request.header.set</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>在任意请求之后加上操作，修改数据,</li>
+<li>拦截器思想<h4 id="Mint-ui"><a href="#Mint-ui" class="headerlink" title="Mint-ui"></a>Mint-ui</h4><ul>
+<li>在使用框架时，第一：考虑结合性好(能实现需求)<ul>
+<li>好用,简单</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+
+      
+
+     
+       <div class="reward">
+        <p class="btn_reward">
+         <a data-track="点击赏" href="#reward" class="btn_a">赏</a>
+        </p>
+        <p>我知道是不会有人点的，但万一有人想不开呢？</p>
+ </div>
+
+ <div id="reward" style="display:none;">
+			<hr class="star-primary"></hr>
+
+			<div class="alipay">
+			<a href="/images/assets/reward_alipay.png" class="fancybox">
+			<img src="/images/assets/reward_alipay.png" width="168px" height="168px" class="skip" title="支付宝扫一扫">
+			</a>
+			</div>
+
+			<div class="wechat">
+			<a href="/images/assets/reward_wechat.png" class="fancybox">
+			<img src="/images/assets/reward_wechat.png" width="168px" height="16px" class="skip" title="微信扫一扫">
+			</a>
+			</div>
+</div>
+
+     
+
+      
+      <div class="copyright">
+       <strong>本文链接: </strong>http://yoursite.com/2017/04/15/vue3-md/ </br>
+       <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。转载请注明出处！</br>
+      </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <h4>NEXT POST</h4>
+              <a href="/2017/04/14/mynote-md/" rel="prev" title="mynote.md">
+                mynote.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+  
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+        <div class="footer-inner">
+          <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i> 
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="/#about">Suntingting</a></span> 
+  <span>Myblog | </span>  
+  
+  <span>Powered by <a href="http://hexo.io">Hexo</a></span>
+</div>
+
+
+ <div class="union">
+  <a href="https://www.upyun.com/?ref=liuzhichao.com" target="_blank"><img class="skip_lazyload skip" src="/images/assets/upyun_logo_90x45.png" alt="UPYUN"></a>
+</div>
+
+
+
+        </div>
+      </footer>
+      
+<div class="am-navbar am-cf am-navbar-default" id="mobile-nav">
+      <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+      
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+          
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+      
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+          
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+      
+              <i class="menu-item-icon fa fa-comments-o fa-fw"></i> <br />
+          
+            Guestbook
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/#about" rel="section">
+      
+              <i class="menu-item-icon fa fa-info fa-fw"></i> <br />
+          
+            About
+          </a>
+        </li>
+      
+         
+      </ul>
+  </div>
+ 
+
+    </div>
+  </div>
+  <!-- end blog-->
+
+
+
+
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.0/jquery.min.js" skip="true"></script>
+  
+<script src="/vendors/prettify/prettify.js"></script>
+
+
+
+<script src="/js/about.js"></script>
+
+
+
+<script src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="/js/fancy-box.js"></script>
+<script src="/js/dynamic.to.top.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+
+</body>
+</html>
