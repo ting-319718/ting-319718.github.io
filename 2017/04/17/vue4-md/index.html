@@ -36,7 +36,7 @@
      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-  <title> vue4.md | Suntingting blog </title>
+  <title>  | Suntingting blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,7 +165,7 @@
             
             
               
-                vue4.md
+                
               
             
           </h1>
@@ -204,35 +204,29 @@
 <li>3、创建对象</li>
 <li>4、配置路由</li>
 <li>5、构造Vue实例，将该参数</li>
-<li>6、写上router-view,有了它，才有锚点值改变的页面效果<h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><ul>
-<li>设置路由操作A</li>
-</ul>
-<ul>
+<li>6、写上router-view,有了它，才有锚点值改变的页面效果<h4 id="params"><a href="#params" class="headerlink" title="params"></a>params</h4></li>
+<li>设置路由操作A<ul>
 <li>在页面来说，就是配置一个</li>
 </ul>
-<ul>
-<li>返回功能</li>
-</ul>
-<ul>
+</li>
+<li>返回功能<ul>
 <li>给按钮添加点击事件：<code>this.$router.go(-1)</code> 返回上一个历史记录</li>
 </ul>
-<ul>
+</li>
 <li>当调用Vue.use(VueRouter);</li>
 <li>会给 对象的原型上挂载$router提供一些功能</li>
-<li>会给 对象的原型上挂载$router提供一些数据获取</li>
-</ul>
-<ul>
+<li>会给 对象的原型上挂载$router提供一些数据获取<ul>
 <li>Vue.prototype.$router=xxx</li>
 </ul>
-<ul>
+</li>
 <li>this.$router能够拿到</li>
 <li>实际上它们是继承关系，VueComponent对象都是继承于Vue对象的</li>
 <li>vue-resource</li>
 <li>1、安装插件 Vue.http.get || this</li>
 </ul>
-</li>
+<h4 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h4><ul>
+<li>如果是设置scoped是只针对当前的template生效,在style scoped中设置template中没有写死的img标签的样式就不会起作用，因为template中会有动态获取的图片，此时就要在全局global.css中设置才会生效.</li>
 </ul>
-<p>###</p>
 </span>
       
     </div>
