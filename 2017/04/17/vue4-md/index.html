@@ -27,12 +27,6 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com"/>
-
-
-
-
-
 <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" skip="true">
 <link rel="stylesheet" href="/vendors/fancybox/source/jquery.fancybox.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -42,7 +36,7 @@
      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-  <title> Suntingting blog </title>
+  <title> vue4.md | Suntingting blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -82,9 +76,7 @@
 </div>
 
   <div id="blog">
-    <div class="container wrapper 
-   page-home 
-">
+    <div class="container wrapper page-post-detail">
       <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
           <div class="header-inner"><div class="site-header" role="banner">
 <nav class="top-nav">
@@ -151,15 +143,9 @@
         <div class="main-inner">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -179,10 +165,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/17/vue4-md/" itemprop="url">
-                  vue4.md
-                </a>
+                vue4.md
               
             
           </h1>
@@ -215,10 +198,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <h4 id="vue-router操作流程"><a href="#vue-router操作流程" class="headerlink" title="vue-router操作流程"></a>vue-router操作流程</h4><ul>
+        <span itemprop="articleBody"><h4 id="vue-router操作流程"><a href="#vue-router操作流程" class="headerlink" title="vue-router操作流程"></a>vue-router操作流程</h4><ul>
 <li>1、下载包/引入该对象</li>
 <li>2、安装插件 vue.use()</li>
 <li>3、创建对象</li>
@@ -253,10 +233,7 @@
 </li>
 </ul>
 <p>#### </p>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
@@ -265,346 +242,76 @@
       
 
      
+       <div class="reward">
+        <p class="btn_reward">
+         <a data-track="点击赏" href="#reward" class="btn_a">赏</a>
+        </p>
+        <p>我知道是不会有人点的，但万一有人想不开呢？</p>
+ </div>
 
-      
+ <div id="reward" style="display:none;">
+			<hr class="star-primary"></hr>
 
-      
+			<div class="alipay">
+			<a href="/images/assets/reward_alipay.png" class="fancybox">
+			<img src="/images/assets/reward_alipay.png" width="168px" height="168px" class="skip" title="支付宝扫一扫">
+			</a>
+			</div>
 
-  
-
-      
-      
-        <div class="post-eof">
-
-        </div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/15/vue3-md/" itemprop="url">
-                  vue3.md
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2017-04-15T09:22:34+08:00" content="2017-04-15">
-              2017-04-15
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h4 id="vue复习"><a href="#vue复习" class="headerlink" title="vue复习"></a>vue复习</h4><ul>
-<li>父传子、子传父<ul>
-<li>父传子<ul>
-<li>给子组件声明props属性[‘属性名’]</li>
-<li>涉及到js逻辑代码，通过this.$props.属性名获取</li>
-</ul>
-</li>
-<li>传递属性值，常量直接传递不需要绑定属性</li>
-<li>变量需要绑定属性:属性名</li>
-</ul>
-<ul>
-<li>接收和发射需要是同一个对象</li>
-<li>核心:每个对象中都储存这一个保存任务的对象，这个对象的key就是字符串，值就是函数</li>
-<li>blod() 二进制数据<h4 id="get和post请求总结"><a href="#get和post请求总结" class="headerlink" title="get和post请求总结"></a>get和post请求总结</h4></li>
-<li>get请求可以减少到只给一个url参数，then是一个函数，第一个参数是成功后的回调，第二个参数是失败后的回调</li>
-<li>post请求<h4 id="vueRouter"><a href="#vueRouter" class="headerlink" title="vueRouter"></a>vueRouter</h4></li>
-<li><h4 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h4></li>
-<li>在任意请求之前做一些操作，比如加上头信息<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.http.interceptors.push(function(request,next)&#123;</div><div class="line">//</div><div class="line">request.header.set</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>在任意请求之后加上操作，修改数据,</li>
-<li>拦截器思想<h4 id="Mint-ui"><a href="#Mint-ui" class="headerlink" title="Mint-ui"></a>Mint-ui</h4><ul>
-<li>在使用框架时，第一：考虑结合性好(能实现需求)<ul>
-<li>好用,简单</li>
-</ul>
-</li>
-<li>sublime创建vue文件,vue+tab可快速创建vue结构(在安装好插件这样使用)</li>
-<li>momentjs.cn 操作日期的库<h4 id="momentJS"><a href="#momentJS" class="headerlink" title="momentJS"></a>momentJS</h4></li>
-<li>moment().format(‘YYYY-MM-DD HH:mm:ss’) 当前时间</li>
-</ul>
-</li>
-</ul>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-
-      
+			<div class="wechat">
+			<a href="/images/assets/reward_wechat.png" class="fancybox">
+			<img src="/images/assets/reward_wechat.png" width="168px" height="16px" class="skip" title="微信扫一扫">
+			</a>
+			</div>
+</div>
 
      
 
       
+      <div class="copyright">
+       <strong>本文链接: </strong>http://yoursite.com/2017/04/17/vue4-md/ </br>
+       <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。转载请注明出处！</br>
+      </div>
+      
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <h4>NEXT POST</h4>
+              <a href="/2017/04/15/vue3-md/" rel="prev" title="vue3.md">
+                vue3.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
   
 
       
-      
-        <div class="post-eof">
-
-        </div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/14/mynote-md/" itemprop="url">
-                  mynote.md
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2017-04-14T21:26:29+08:00" content="2017-04-14">
-              2017-04-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h4 id="你好世界"><a href="#你好世界" class="headerlink" title="你好世界"></a>你好世界</h4><ul>
-<li>那是你家</li>
-</ul>
-
-            
-          </span>
-        
+    <div class="post-spread">
       
     </div>
-
-    <footer class="post-footer">
-
-      
-
-     
-
-      
-
-      
-
-  
-
-      
-      
-        <div class="post-eof">
-
-        </div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2017-04-14T21:15:20+08:00" content="2017-04-14">
-              2017-04-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-
-      
-
-     
-
-      
-
-      
-
-  
-
-      
-      
-        <div class="post-eof">
-
-        </div>
-      
-    </footer>
-  </article>
-
-
-    
-
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
