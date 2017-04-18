@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/18/review/index.html">
 <meta property="og:site_name" content="Suntingting blog">
 <meta property="og:description" content="Ajax是什么 ajax并不算是一种新的技术，可以说是已有技术的组合，主要用来实现客户端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax,可以使用隐藏侦(iframe)方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持 1、使用ajax原生方式发送请求主要通过XMLHttpRequest(标准浏览器)，ActiveObject(IE浏览器)对象实现异步通信">
-<meta property="og:updated_time" content="2017-04-18T08:56:35.581Z">
+<meta property="og:updated_time" content="2017-04-18T13:45:31.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="review">
 <meta name="twitter:description" content="Ajax是什么 ajax并不算是一种新的技术，可以说是已有技术的组合，主要用来实现客户端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax,可以使用隐藏侦(iframe)方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持 1、使用ajax原生方式发送请求主要通过XMLHttpRequest(标准浏览器)，ActiveObject(IE浏览器)对象实现异步通信">
@@ -164,7 +164,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ajax是什么"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ajax是什么</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#如何解决跨域问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何解决跨域问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"><span class="post-toc-number">3.</span> <span class="post-toc-text">1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-本质：利用script标签的src属性可以跨域的特性。"><span class="post-toc-number">4.</span> <span class="post-toc-text">2. 本质：利用script标签的src属性可以跨域的特性。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-实现流程"><span class="post-toc-number">5.</span> <span class="post-toc-text">3. 实现流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-实现步骤"><span class="post-toc-number">6.</span> <span class="post-toc-text">4. 实现步骤</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ajax是什么"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ajax是什么</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#如何解决跨域问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何解决跨域问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"><span class="post-toc-number">3.</span> <span class="post-toc-text">1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-本质：利用script标签的src属性可以跨域的特性。"><span class="post-toc-number">4.</span> <span class="post-toc-text">2. 本质：利用script标签的src属性可以跨域的特性。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-实现流程"><span class="post-toc-number">5.</span> <span class="post-toc-text">3. 实现流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-实现步骤"><span class="post-toc-number">6.</span> <span class="post-toc-text">4. 实现步骤</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#split-和join-区别"><span class="post-toc-number">7.</span> <span class="post-toc-text">split()和join()区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数组方法-pop-push-unshift-shift"><span class="post-toc-number">8.</span> <span class="post-toc-text">数组方法 pop() push() unshift() shift()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#例举3种强制类型转换和2种隐式类型转换"><span class="post-toc-number">9.</span> <span class="post-toc-text">例举3种强制类型转换和2种隐式类型转换</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#介绍一下-JavaScript-原型，原型链，它们有何特点？"><span class="post-toc-number">10.</span> <span class="post-toc-text">介绍一下 JavaScript 原型，原型链，它们有何特点？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript-有几种类型的值？能否画一下它们的内存图？"><span class="post-toc-number">11.</span> <span class="post-toc-text">JavaScript 有几种类型的值？能否画一下它们的内存图？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#null-和-undefined-有何区别？"><span class="post-toc-number">12.</span> <span class="post-toc-text">null 和 undefined 有何区别？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意："><span class="post-toc-number">13.</span> <span class="post-toc-text">注意：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简述JS闭包"><span class="post-toc-number">14.</span> <span class="post-toc-text">简述JS闭包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大"><span class="post-toc-number">15.</span> <span class="post-toc-text">使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大</span></a></li></ol>
         </nav>
     </aside>
     
@@ -213,6 +213,63 @@
 </ul>
 </li>
 </ul>
+<h4 id="split-和join-区别"><a href="#split-和join-区别" class="headerlink" title="split()和join()区别"></a>split()和join()区别</h4><ul>
+<li>前者切割成数组的形式 后者是将数组装换成字符串<h4 id="数组方法-pop-push-unshift-shift"><a href="#数组方法-pop-push-unshift-shift" class="headerlink" title="数组方法 pop() push() unshift() shift()"></a>数组方法 pop() push() unshift() shift()</h4></li>
+</ul>
+<ul>
+<li>pop()尾部添加  push() 尾部删除</li>
+<li>unshift() 头部添加  shift() 头部删除</li>
+</ul>
+<h4 id="例举3种强制类型转换和2种隐式类型转换"><a href="#例举3种强制类型转换和2种隐式类型转换" class="headerlink" title="例举3种强制类型转换和2种隐式类型转换"></a>例举3种强制类型转换和2种隐式类型转换</h4><ul>
+<li>强制： parseInt() parseFloat() Nuumber()</li>
+<li>隐式： == !!</li>
+</ul>
+<h4 id="介绍一下-JavaScript-原型，原型链，它们有何特点？"><a href="#介绍一下-JavaScript-原型，原型链，它们有何特点？" class="headerlink" title="介绍一下 JavaScript 原型，原型链，它们有何特点？"></a>介绍一下 JavaScript 原型，原型链，它们有何特点？</h4><ul>
+<li>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，</li>
+<li>于是就这样一直找下去，也就是我们平时所说的原型链的概念。</li>
+<li><p>关系：instance.constructor.prototype = instance.<strong>proto</strong></p>
+</li>
+<li><p>特点：JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本，当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+</li>
+<li><p>当我们需要一个属性时，JavaScript引擎会先看当前对象中是否有这个属性，如果没有的话，就会查找它的prototype对象是否有这个属性，如此递推下去，一致检索到Object内建对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function Func()&#123;&#125;</div><div class="line">Func.prototype.name = &quot;Xiaosong&quot;;</div><div class="line">Func.prototype.getInfo = function() &#123;</div><div class="line">  return this.name;</div><div class="line">&#125;</div><div class="line">var person = new Func();</div><div class="line">console.log(person.getInfo());</div><div class="line">//&quot;Xiaosong&quot;</div><div class="line">console.log(Func.prototype);</div><div class="line">//Func &#123; name = &quot;Xiaosong&quot;, getInfo = function() &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="JavaScript-有几种类型的值？能否画一下它们的内存图？"><a href="#JavaScript-有几种类型的值？能否画一下它们的内存图？" class="headerlink" title="JavaScript 有几种类型的值？能否画一下它们的内存图？"></a>JavaScript 有几种类型的值？能否画一下它们的内存图？</h4><ul>
+<li>栈：原始数据类型（Undefined，Null，Boolean，Number，String）</li>
+<li>堆：引用数据类型（对象、数组、函数）</li>
+<li><p>两种类型的区别：存储位置不同</p>
+</li>
+<li><p>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；</p>
+</li>
+<li>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</li>
+</ul>
+<h4 id="null-和-undefined-有何区别？"><a href="#null-和-undefined-有何区别？" class="headerlink" title="null 和 undefined 有何区别？"></a>null 和 undefined 有何区别？</h4><ul>
+<li>null        表示一个对象被定义了，值为“空值”；</li>
+<li><p>undefined   表示不存在这个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">typeof undefined</div><div class="line">  //&quot;undefined&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>undefined :是一个表示”无”的原始值或者说表示”缺少值”，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined;<br>例如变量被声明了，但没有赋值时，就等于undefined。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">typeof null</div><div class="line">  //&quot;object&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>null : 是一个对象(空对象, 没有任何属性和方法)；<br>例如作为函数的参数，表示该函数的参数不是对象；<br>//</p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4></li>
+<li>在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined</li>
+</ul>
+</li>
+</ul>
+<h4 id="简述JS闭包"><a href="#简述JS闭包" class="headerlink" title="简述JS闭包"></a>简述JS闭包</h4><ul>
+<li>闭包是指有权去访问另一个函数中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部</li>
+<li><p>闭包特性</p>
+<ul>
+<li>函数内再嵌套函数6</li>
+<li>内部函数可以引用外层函数的参数和变量</li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+<li>li节点的onclick事件都能正确的弹出当前被点击的li索引<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">  &lt;ul&gt;</div><div class="line">  &lt;li&gt; index = 0 &lt;/li&gt;</div><div class="line">  &lt;li&gt; index = 1 &lt;/li&gt;</div><div class="line">  &lt;li&gt; index = 2 &lt;/li&gt;</div><div class="line">  &lt;li&gt; index = 3 &lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">//js代码</div><div class="line">  var nodes = document.getElementsByTagName(&apos;li&apos;);</div><div class="line">  for(i = 0;i&lt;nodes.length;i+=1) &#123;</div><div class="line">      nodes[i].onclick = function() &#123;</div><div class="line">          console.log(i+1); //不使用闭包的话，值每次都是4</div><div class="line">      &#125;(4);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大"><a href="#使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大" class="headerlink" title="使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大"></a>使用闭包注意点：不滥用，不乱用，由于函数内部的变量都被保存在内存中，会导致内存消耗大</h4></li>
+</ul>
 
         </div>
 
@@ -220,7 +277,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-18T08:56:35.581Z" itemprop="dateUpdated">2017-04-18 16:56:35</time>
+    Last updated: <time datetime="2017-04-18T13:45:31.259Z" itemprop="dateUpdated">2017-04-18 21:45:31</time>
 </span><br>
 
 
@@ -299,9 +356,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/04/15/vue4-md/" id="post-prev" class="post-nav-link">
+      <a href="/2017/04/15/vue3-md/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">vue4.md</h4>
+        <h4 class="title">vue3.md</h4>
       </a>
     </div>
   
