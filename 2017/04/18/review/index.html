@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/18/review/index.html">
 <meta property="og:site_name" content="Suntingting blog">
 <meta property="og:description" content="Ajax是什么 ajax并不算是一种新的技术，可以说是已有技术的组合，主要用来实现客户端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax,可以使用隐藏侦(iframe)方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持 1、使用ajax原生方式发送请求主要通过XMLHttpRequest(标准浏览器)，ActiveObject(IE浏览器)对象实现异步通信">
-<meta property="og:updated_time" content="2017-04-18T08:44:27.454Z">
+<meta property="og:updated_time" content="2017-04-18T08:47:29.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="review">
 <meta name="twitter:description" content="Ajax是什么 ajax并不算是一种新的技术，可以说是已有技术的组合，主要用来实现客户端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax,可以使用隐藏侦(iframe)方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持 1、使用ajax原生方式发送请求主要通过XMLHttpRequest(标准浏览器)，ActiveObject(IE浏览器)对象实现异步通信">
@@ -48,7 +48,7 @@
     <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+          <img src="/img/lizhi.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">孙婷婷</h5>
@@ -198,26 +198,29 @@
 <li>理解跨域：协议，域名，端口号都相同才同域，否则都是跨域</li>
 <li>1、处于安全考虑，服务器不允许ajax跨域获取数据，但是可以跨域获取文件内容，所以基于这一点，可以动态创建script标签，使用标签的src属性访问js文件的形式获取js脚本，并且这个脚本中的内容是函数调用，该函数调用的参数是服务器返回的数据，为了获取这里的参数数据，需要事先在页面中定义回调函数，在回调函数中处理服务器返回的数据，这就是解决跨域问题的主流解决方案<br><strong>实现JSONP跨域时，必须创建全局函数并且将其函数名字发送到服务器</strong></li>
 </ul>
+<h4 id="1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"><a href="#1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。" class="headerlink" title="1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"></a>1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。</h4><h4 id="2-本质：利用script标签的src属性可以跨域的特性。"><a href="#2-本质：利用script标签的src属性可以跨域的特性。" class="headerlink" title="2. 本质：利用script标签的src属性可以跨域的特性。"></a>2. 本质：利用script标签的src属性可以跨域的特性。</h4><h4 id="3-实现流程"><a href="#3-实现流程" class="headerlink" title="3. 实现流程"></a>3. 实现流程</h4><ul>
+<li>创建script标签，添加到head标签下</li>
+<li>创建一个全局函数，用来处理服务响应的数据</li>
+<li>指定script标签的src属性值，同时将全局回调函数发送到服务器</li>
+<li>要与后台人员沟通，将发送全局函数的参数名告诉后台人员等等</li>
+</ul>
+<h4 id="4-实现步骤"><a href="#4-实现步骤" class="headerlink" title="4. 实现步骤"></a>4. 实现步骤</h4><ul>
+<li>创建请求对象 -&gt; script标签</li>
+<li>创建全局函数，将全局函数添加到 data 内</li>
+<li>格式化数据</li>
+<li>监听请求状态 -&gt;<br>使用timeout来做请求状态的监听；如果在超时时间内完成请求，表示成功；否则失败</li>
+<li>发送请求 -&gt; 给script标签指定src属性值</li>
+</ul>
 </li>
 </ul>
-<h4 id="1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"><a href="#1-JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。" class="headerlink" title="1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。"></a>1. JSONP：解决跨域的一种方式。缺点：不能发送跨域的post请求。</h4><h4 id="2-本质：利用script标签的src属性可以跨域的特性。"><a href="#2-本质：利用script标签的src属性可以跨域的特性。" class="headerlink" title="2. 本质：利用script标签的src属性可以跨域的特性。"></a>2. 本质：利用script标签的src属性可以跨域的特性。</h4><h4 id="3-实现流程"><a href="#3-实现流程" class="headerlink" title="3. 实现流程"></a>3. 实现流程</h4><pre><code>* 创建script标签，添加到head标签下
-* 创建一个全局函数，用来处理服务响应的数据
-* 指定script标签的src属性值，同时将全局回调函数发送到服务器
-* 要与后台人员沟通，将发送全局函数的参数名告诉后台人员等等
-</code></pre><h4 id="4-实现步骤"><a href="#4-实现步骤" class="headerlink" title="4. 实现步骤"></a>4. 实现步骤</h4><pre><code>* 创建请求对象 -&gt; script标签
-* 创建全局函数，将全局函数添加到 data 内
-* 格式化数据
-* 监听请求状态 -&gt;
-  使用timeout来做请求状态的监听；如果在超时时间内完成请求，表示成功；否则失败
-* 发送请求 -&gt; 给script标签指定src属性值
-</code></pre>
+
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-18T08:44:27.454Z" itemprop="dateUpdated">2017-04-18 16:44:27</time>
+    Last updated: <time datetime="2017-04-18T08:47:29.437Z" itemprop="dateUpdated">2017-04-18 16:47:29</time>
 </span><br>
 
 
@@ -225,7 +228,7 @@
     </div>
     <footer>
         <a href="http://yoursite.com">
-            <img src="/img/avatar.jpg" alt="孙婷婷">
+            <img src="/img/lizhi.jpg" alt="孙婷婷">
             孙婷婷
         </a>
     </footer>
@@ -248,7 +251,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/18/review/&title=《review》 — Suntingting blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/18/review/&title=《review》 — Suntingting blog&pic=http://yoursite.com/img/lizhi.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -396,7 +399,7 @@ lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.6.1/js/embed.min.js')
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/18/review/&title=《review》 — Suntingting blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/18/review/&title=《review》 — Suntingting blog&pic=http://yoursite.com/img/lizhi.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
