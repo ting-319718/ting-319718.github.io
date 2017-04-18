@@ -1,204 +1,195 @@
 <!DOCTYPE html>
-<html class="">
-
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta http-equiv="Cache-Control" content="no-transform"/>
-<meta http-equiv="Cache-Control" content="no-siteapp"/>
-<meta name="renderer" content="webkit">
+    
 
+    
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
 
 
 
-
-
-
-  <meta name="keywords" content="柳志超, 柳志超博客" />
-
-
-
-
-
-
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" skip="true">
-<link rel="stylesheet" href="/vendors/fancybox/source/jquery.fancybox.css">
-<link rel="stylesheet" href="/css/main.css">
-
-<!--[if lt IE 9]>
-     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-  <title>  | Suntingting blog </title>
+    <meta charset="utf-8">
+    
+    
+    
+    <title>No title | Suntingting blog | Myblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="vue-router操作流程 1、下载包/引入该对象 2、安装插件 vue.use() 3、创建对象 4、配置路由 5、构造Vue实例，将该参数 6、写上router-view,有了它，才有锚点值改变的页面效果params 设置路由操作A 在页面来说，就是配置一个   返回功能 给按钮添加点击事件：this.$router.go(-1) 返回上一个历史记录   当调用Vue.use(VueRout">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No title">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/vue4-md/index.html">
+<meta property="og:site_name" content="Suntingting blog">
+<meta property="og:description" content="vue-router操作流程 1、下载包/引入该对象 2、安装插件 vue.use() 3、创建对象 4、配置路由 5、构造Vue实例，将该参数 6、写上router-view,有了它，才有锚点值改变的页面效果params 设置路由操作A 在页面来说，就是配置一个   返回功能 给按钮添加点击事件：this.$router.go(-1) 返回上一个历史记录   当调用Vue.use(VueRout">
+<meta property="og:updated_time" content="2017-04-18T08:06:52.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="No title">
+<meta name="twitter:description" content="vue-router操作流程 1、下载包/引入该对象 2、安装插件 vue.use() 3、创建对象 4、配置路由 5、构造Vue实例，将该参数 6、写上router-view,有了它，才有锚点值改变的页面效果params 设置路由操作A 在页面来说，就是配置一个   返回功能 给按钮添加点击事件：this.$router.go(-1) 返回上一个历史记录   当调用Vue.use(VueRout">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body>
+    <div id="loading" class="active"></div>
 
-  <!--[if lt IE 9]>
-<style>
-#outdated{position:fixed;top:0;left:0;width:100%;height:148px;text-align:center;text-transform:uppercase;z-index:1500;background-color:#f25648;color:#fff}* html #outdated{position:absolute}#outdated h6{font-size:25px;line-height:25px;margin:30px 0 10px}#outdated p{font-size:12px;line-height:12px;margin:0}#outdated #btnUpdateBrowser{display:block;position:relative;padding:10px 20px;margin:30px auto 0;width:230px;color:#fff;text-decoration:none;border:2px solid #fff;cursor:pointer}#outdated #btnUpdateBrowser:hover{color:#f25648;background-color:#fff}
-</style>
-<div id="outdated">
- <h6>Your browser is out of date!</h6>
- <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow" target="_blank">Update my browser now </a></p>
-</div>
-<![endif]-->
- <div id="about" style="display:none">
-    <div class="container">
-        <section class="content">
-            <div id="about-card">
-                <span id="about-btn-close">
-                    <i class="fa fa-remove"></i>
-                </span>
-                 
-                 <img id="about-card-picture" src="D:/Hexo/themes/hexo-theme-read/source/images/bloglogo.png" class="skip"/>
-                 
-                    <h4 id="about-card-name">Hi,I'm 孙婷婷</h4>
-                    <h5 id="about-card-bio"><p>If you have any question, please do not hesitate to contact me. :)</p></h5>
-                    <div id="profile_social">
-                        <h6>My Social Profiles</h6>
-                            <a href="https://github.com/liuzc" target="_blank"><i class="fa fa-github"></i></a>
-                            <a href="/images/me/wechat.png" target="_blank" rel="portfolio" class="info fancybox"><i class="fa fa-weixin"></i></a>
-                            <a href="/images/me/myemail.jpg" target="_blank" class="fancybox"><i class="fa fa-envelope"></i></a>
-                            <a href="https://www.flickr.com/photos/liuzc" target="_blank"><i class="fa fa-flickr"></i></a>
-                            <a href="https://twiiter.com/liuzc89" target="_blank"><i class="fa fa-twitter"></i></a>
-                    </div>
-            </div>
-        </section>
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">孙婷婷</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
     </div>
-</div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
 
-  <div id="blog">
-    <div class="container wrapper page-post-detail">
-      <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-          <div class="header-inner"><div class="site-header" role="banner">
-<nav class="top-nav">
-   <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
-   <a id="nav-search-btn" class="nav-icon st-search-show-outputs" href="#" title="Search"></a>
-</nav>
-  <hgroup>
-    
-    <h1 class="site-title">
-      <a rel="home" href="/#about">
-      <span class="logo-line-before">
-        <i></i>
-      </span>
-        <img class="skip custom_logo" alt="Suntingting blog" src="D:/Hexo/themes/hexo-theme-read/source/images/bloglogo.png">
-        <span class="logo-line-after">
-          <i></i>
-        </span>
-      </a>
-    </h1>
-  
-    <h2 class="site-description">Myblog</h2>
-  </hgroup>
-
-  <nav id="site-navigation" class="main-navigation" role="navigation">
-    
-    <ul id="menu" class="menu ">
-      
-      
-      <li class="menu-item menu-item-home">
-        <a href="/" rel="section">
-          Home
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
         </a>
-      </li>
-      
-      
-      <li class="menu-item menu-item-archives">
-        <a href="/archives" rel="section">
-          Archives
-        </a>
-      </li>
-      
-      
-      <li class="menu-item menu-item-guestbook">
-        <a href="/guestbook" rel="section">
-          Guestbook
-        </a>
-      </li>
-      
-      
-      <li class="menu-item menu-item-about">
-        <a href="/#about" rel="section">
-          About
-        </a>
-      </li>
-      
-    </ul>
-    
-  </nav>
-</div>
-</div>
-      </header>
-
-      <main id="main" class="main">
-        <div class="main-inner">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+        <div class="flex-col header-title ellipsis"></div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-              
-            
-          </h1>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
+    </div>
+</header>
+<header class="content-header post-header">
 
+    <div class="container fade-scale">
+        <h1 class="title"></h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-17T01:26:03.505Z" itemprop="datePublished" class="page-time">
+  2017-04-17
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vue-router操作流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue-router操作流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#params"><span class="post-toc-number">2.</span> <span class="post-toc-text">params</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片显示问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">图片显示问题</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-vue4-md"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title"></h1>
         <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2017-04-17T09:26:03+08:00" content="2017-04-17">
-              2017-04-17
-            </time>
-          </span>
+            <time class="post-time" title="2017-04-17 09:26:03" datetime="2017-04-17T01:26:03.505Z"  itemprop="datePublished">2017-04-17</time>
 
-          
-
-          
             
-          
 
-          
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
 
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        <span itemprop="articleBody"><h4 id="vue-router操作流程"><a href="#vue-router操作流程" class="headerlink" title="vue-router操作流程"></a>vue-router操作流程</h4><ul>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="vue-router操作流程"><a href="#vue-router操作流程" class="headerlink" title="vue-router操作流程"></a>vue-router操作流程</h4><ul>
 <li>1、下载包/引入该对象</li>
 <li>2、安装插件 vue.use()</li>
 <li>3、创建对象</li>
@@ -227,212 +218,296 @@
 <h4 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h4><ul>
 <li>如果是设置scoped是只针对当前的template生效,在style scoped中设置template中没有写死的img标签的样式就不会起作用，因为template中会有动态获取的图片，此时就要在全局global.css中设置才会生效.</li>
 </ul>
-</span>
-      
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-18T08:06:52.135Z" itemprop="dateUpdated">2017-04-18 16:06:52</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/04/17/vue4-md/" target="_blank" rel="external">http://yoursite.com/2017/04/17/vue4-md/</a>
     </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="孙婷婷">
+            孙婷婷
+        </a>
+    </footer>
+</blockquote>
 
-    <footer class="post-footer">
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
 
-      
 
-     
-       <div class="reward">
-        <p class="btn_reward">
-         <a data-track="点击赏" href="#reward" class="btn_a">赏</a>
-        </p>
-        <p>我知道是不会有人点的，但万一有人想不开呢？</p>
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/17/vue4-md/&title=Suntingting blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/17/vue4-md/&title=Suntingting blog&source=孙婷婷的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/17/vue4-md/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Suntingting blog&url=http://yoursite.com/2017/04/17/vue4-md/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/17/vue4-md/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
  </div>
 
- <div id="reward" style="display:none;">
-			<hr class="star-primary"></hr>
 
-			<div class="alipay">
-			<a href="/images/assets/reward_alipay.png" class="fancybox">
-			<img src="/images/assets/reward_alipay.png" width="168px" height="168px" class="skip" title="支付宝扫一扫">
-			</a>
-			</div>
 
-			<div class="wechat">
-			<a href="/images/assets/reward_wechat.png" class="fancybox">
-			<img src="/images/assets/reward_wechat.png" width="168px" height="16px" class="skip" title="微信扫一扫">
-			</a>
-			</div>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
-     
 
-      
-      <div class="copyright">
-       <strong>本文链接: </strong>http://yoursite.com/2017/04/17/vue4-md/ </br>
-       <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。转载请注明出处！</br>
-      </div>
-      
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <h4>PREVIOUS POST</h4>
-              <a href="/2017/04/18/review/" rel="next" title="review">
-                <i class="fa fa-chevron-left"></i> review
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <h4>NEXT POST</h4>
-              <a href="/2017/04/15/vue3-md/" rel="prev" title="vue3.md">
-                vue3.md <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
         </div>
-      
-
-  
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
     </div>
-  </div>
 
-
-          </div>
-          
-  <div class="comments" id="comments">
     
-  </div>
-
-
-        </div>
-      </main>
-
-      <footer id="footer" class="footer">
-        <div class="footer-inner">
-          <div class="copyright" >
+<nav class="post-nav flex-row flex-justify-between">
   
-  &copy;  2011 - 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i> 
-  </span>
-  <span class="author" itemprop="copyrightHolder"><a href="/#about">Suntingting blog</a></span> 
-  <span>Myblog | </span>  
-  
-  <span>Powered by <a href="http://hexo.io">Hexo</a></span>
-</div>
-
-
- <div class="union">
-  <a href="https://www.upyun.com/?ref=liuzhichao.com" target="_blank"><img class="skip_lazyload skip" src="/images/assets/upyun_logo_90x45.png" alt="UPYUN"></a>
-</div>
-
-
-
-        </div>
-      </footer>
-      
-<div class="am-navbar am-cf am-navbar-default" id="mobile-nav">
-      <ul class="am-navbar-nav am-cf am-avg-sm-4">
-        
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-      
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-          
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-      
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-          
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
-      
-              <i class="menu-item-icon fa fa-comments-o fa-fw"></i> <br />
-          
-            Guestbook
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/#about" rel="section">
-      
-              <i class="menu-item-icon fa fa-info fa-fw"></i> <br />
-          
-            About
-          </a>
-        </li>
-      
-         
-      </ul>
-  </div>
- 
-
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/15/vue3-md/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vue3.md</h4>
+      </a>
     </div>
-  </div>
-  <!-- end blog-->
-
-
-
-
-
-
-<script src="//cdn.bootcss.com/jquery/1.12.0/jquery.min.js" skip="true"></script>
-  
-<script src="/vendors/prettify/prettify.js"></script>
-
-
-
-<script src="/js/about.js"></script>
-
-
-
-<script src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="/js/fancy-box.js"></script>
-<script src="/js/dynamic.to.top.min.js"></script>
-
-<script src="/js/main.js"></script>
-
- 
-
-
-
-
-
-
-
-
-
-
-
   
 
   
-
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/18/review/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">review</h4>
+      </a>
+    </div>
   
+</nav>
 
 
 
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="vue4-md" data-title="" data-url="http://yoursite.com/2017/04/17/vue4-md/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.6.1/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>孙婷婷 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/17/vue4-md/&title=《No title》 — Suntingting blog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/17/vue4-md/&title=《No title》 — Suntingting blog&source=孙婷婷的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/17/vue4-md/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — Suntingting blog&url=http://yoursite.com/2017/04/17/vue4-md/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/17/vue4-md/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/17/vue4-md/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 
